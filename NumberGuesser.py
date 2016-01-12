@@ -5,12 +5,21 @@ import random
 def main():
 
     #varibles
-    randNumber = random.randint(0,9)
+    high_number = 0
+    low_number = 0
     guessedNumber = 0
 
+    #pick a number
+    print("Choose a range of numbers to guess from")
+    low_number = int(input("First, choose the lowest number in range: "))
+    high_number = int(input("Second, choose the highest number in range: "))
+    print("I've picked a number.")
+
+    randNumber = random.randint(low_number, high_number)
+
+
     while True:
-        #pick a number
-        print("I've picked a number.")
+
         guessedNumber = int(input("Guess what it is: "))
 
 
